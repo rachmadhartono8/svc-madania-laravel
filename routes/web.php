@@ -16,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 // test make brach develop
+//
+// testing sebelum pulang
 });
