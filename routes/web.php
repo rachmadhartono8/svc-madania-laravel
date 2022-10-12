@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 // test make brach develop
-// Testing 
+// Testing
 // testing sebelum pulang
+
+// 1. inisialisasi service
+// 2. Belajar bikin endpoint madania
+// 3. nyoba ngembangin satu fitur CRUD
+// 4. Riset apa aja yang mau di buat.
+// 5. Belajar Blade Templating Engine dari CSS dan HTML => Bootsraps
 });
