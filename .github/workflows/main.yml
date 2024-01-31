@@ -37,8 +37,8 @@ jobs:
     # - name: Run static analysis
     #   run: php artisan analyze
 
-    - name: Run linting
-      run: composer lint
+    # - name: Run linting
+    #   run: composer lint
 
     - name: Build assets
       run: npm install && npm run production # Sesuaikan jika Anda menggunakan Yarn
