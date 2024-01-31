@@ -23,6 +23,11 @@ jobs:
       with:
         php-version: '8.1.26' # Sesuaikan versi PHP dengan proyek Anda
 
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '21.2.0' # Sesuaikan versi Node.js dengan kebutuhan Anda
+
     - name: Install dependencies
       run: composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
 
