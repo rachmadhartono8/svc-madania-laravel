@@ -52,7 +52,7 @@
         "laravel": {
             "dont-discover": [],
             "APP_ENV": "production",
-            "APP_KEY": "base64:PYL10zvFgzUBV7DY3iXF65IXFAQS5wB6GHK74Mh//vE="
+            "APP_KEY": "base64:nh80rjDhWI3oEwOl8c8auiUU9+O8D/PHLStcmUwSnY4="
         }
     },
     "config": {
