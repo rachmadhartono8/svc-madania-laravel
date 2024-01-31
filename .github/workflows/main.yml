@@ -1,0 +1,45 @@
+name: Laravel CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4' # Sesuaikan versi PHP dengan proyek Anda
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+
+    - name: Run tests
+      run: php artisan test
+
+    - name: Run static analysis
+      run: php artisan analyze
+
+    - name: Run linting
+      run: composer lint
+
+    - name: Build assets
+      run: npm install && npm run production # Sesuaikan jika Anda menggunakan Yarn
+
+    - name: Deploy to production
+      if: github.ref == 'refs/heads/main' # Ganti 'main' sesuai dengan nama branch yang Anda gunakan untuk deployment
+      run: |
+        # Skrip deployment ke server production
+        # Misalnya: ssh user@hostname "cd /path/to/project && git pull origin main && composer install && php artisan migrate"
