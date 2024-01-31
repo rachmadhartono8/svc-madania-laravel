@@ -50,7 +50,9 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [],
+            "APP_ENV": "production",
+            "APP_KEY": "base64:PYL10zvFgzUBV7DY3iXF65IXFAQS5wB6GHK74Mh//vE="
         }
     },
     "config": {
